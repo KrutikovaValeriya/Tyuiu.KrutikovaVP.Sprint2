@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{54F88552-107E-44E9-9C06-130750502ACB}</ProjectGuid>
+    <ProjectGuid>{E61D25D4-F5FE-4413-BCBD-198992FD3084}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Tyuiu.KrutikovaVP.Sprint2.Task0.V20</RootNamespace>
     <AssemblyName>Tyuiu.KrutikovaVP.Sprint2.Task0.V20</AssemblyName>
