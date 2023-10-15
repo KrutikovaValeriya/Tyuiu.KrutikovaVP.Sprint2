@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Tyuiu.KrutikovaVP.Sprint2.Task5.V15.Lib;
+using Tyuiu.KrutikovaVP.Sprint2.Task6.V9.Lib;
 
-namespace Tyuiu.KrutikovaVP.Sprint2.Task5.V15
+namespace Tyuiu.KrutikovaVP.Sprint2.Task6.V9
 {
     internal class Program
     {
@@ -13,37 +13,45 @@ namespace Tyuiu.KrutikovaVP.Sprint2.Task5.V15
         {
             DataService ds = new DataService();
 
-            int k;
+            int m, n;
             string res;
 
             Console.Title = "Спринт #2 | Выполнил: Крутикова В. П. | АСОиУБ-23-3";
             Console.WriteLine("****************************************************************************");
             Console.WriteLine("* Спринт #2                                                                *");
             Console.WriteLine("* Тема: Алгоритмы разветвляющейся структуры                                *");
-            Console.WriteLine("* Задание #5                                                               *");
-            Console.WriteLine("* Вариант #15                                                              *");
+            Console.WriteLine("* Задание #6                                                               *");
+            Console.WriteLine("* Вариант #9                                                              *");
             Console.WriteLine("* Выполнил: Крутикова Валерия Павловна | АСОиУБ-23-3                       *");
             Console.WriteLine("****************************************************************************");
             Console.WriteLine("* УСЛОВИЕ:                                                                 *");
-            Console.WriteLine("* Дано целое число k (1 <= k <= 365). Определить, каким днем недели        *");
-            Console.WriteLine("* является k-ый день не високосного года, в котором 1 янв. - понедельник   *");
+            Console.WriteLine("* Дата некоторого дня характеризуется двумя натуральными числами:          *");
+            Console.WriteLine("* m (порядковый номер месяца) и n (число). По заданным m и n определить    *");
+            Console.WriteLine("* дату следующего дня (принять, что m и n не характеризуют 31 декабря).    *");
             Console.WriteLine("****************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                         *");
             Console.WriteLine("****************************************************************************");
 
 
-            Console.WriteLine("Введите значение k: ");
-            k = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите номер месяца: ");
+            m = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Введите число: ");
+            n = Convert.ToInt32(Console.ReadLine());
 
 
             Console.WriteLine("****************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                               *");
             Console.WriteLine("****************************************************************************");
 
-            if (k < 1 || k > 365)
-                res = "Введено неверное значение!";
+            if ((n < 0 || n > 31) || (m < 1 || m > 12))
+            {
+                res = "Введено неверное значение числа/месяца!";
+
+            }
             else
-                res = "Это день недели: "+ds.FindDayName(k);
+            {
+                res = "Это дата: "+ds.FindDateOfNextDay(m, n);
+            }
 
             Console.WriteLine(res);
 
